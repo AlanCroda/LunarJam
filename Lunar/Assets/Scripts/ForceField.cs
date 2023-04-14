@@ -9,9 +9,8 @@ namespace LunarJam
         private Controls controls;
         private Vector2 movementInput;
 
-        protected override void Start()
+        private void Start()
         {
-            base.Start();
             controls = new Controls();
             controls.Player.Enable();
         }

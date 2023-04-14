@@ -11,10 +11,9 @@ public class Obstacle : MonoBehaviour
     [SerializeField] protected float speed;
     [SerializeField] protected float size = 1.0f;
     
-    protected virtual void Start()
+    protected virtual void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
-
         rb.velocity = -Vector3.right * speed;
         transform.DOScale(transform.localScale * size, 0);
     }
