@@ -16,7 +16,7 @@ namespace LunarJam
 
         private void Update()
         {
-            var newY = transform.position.y + amplitude * Mathf.Tan(Time.time * frequency);
+            var newY = transform.position.y + amplitude * Mathf.Sin(Time.time * frequency);
             var newVel = new Vector2(rb.velocity.x, (newY - transform.position.y) * sineSpeed);
             rb.velocity = newVel;
         }
