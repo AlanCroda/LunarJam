@@ -8,7 +8,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float speed = 5f;
     private Vector2 movementInput;
 
-    private Rigidbody2D rb;
+    internal Rigidbody2D rb;
 
     private void Start()
     {
