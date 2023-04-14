@@ -31,7 +31,13 @@ public class Obstacle : MonoBehaviour
             OnPlayerCollision(collision.gameObject);
         }
     }
-    
+
+    private void OnTriggerStay2D(Collider2D other)
+    {
+        if (other.gameObject.CompareTag("Player"))
+            OnPlayerCollision(other.gameObject);
+    }
+
     protected virtual void OnPlayerCollision(GameObject player)
     {
 

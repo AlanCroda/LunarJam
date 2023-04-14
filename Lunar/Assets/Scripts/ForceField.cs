@@ -4,12 +4,11 @@ using UnityEngine;
 
 namespace LunarJam
 {
-    public class ForceField : MonoBehaviour
+    public class ForceField : Obstacle
     {
         private Rigidbody2D rb;
         private Controls controls;
         private Vector2 movementInput;
-        [SerializeField] private float speed;
 
         private void Start()
         {
@@ -24,17 +23,9 @@ namespace LunarJam
             rb.velocity = -Vector2.right * speed;
         }
 
-        private void OnTriggerEnter2D(Collider2D collision)
+        protected override void OnPlayerCollision(GameObject player)
         {
-            if (collision.gameObject.tag == "Player" && movementInput != Vector2.zero)
-            {
-                print("argh");
-            }
-        }
-
-        private void OnTriggerStay2D(Collider2D collision)
-        {
-            if(collision.gameObject.tag == "Player" && movementInput != Vector2.zero)
+            if(movementInput != Vector2.zero)
             {
                 print("argh");
             }
