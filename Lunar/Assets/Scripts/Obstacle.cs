@@ -23,8 +23,11 @@ public class Obstacle : MonoBehaviour
         Destroy(gameObject);
     }
 
-    protected virtual void OnPlayerCollision()
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            Destroy(gameObject);
+        }
     }
 }
