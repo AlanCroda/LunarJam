@@ -100,6 +100,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 11
+  size: 1
 --- !u!61 &6553059720348445664
 BoxCollider2D:
   m_ObjectHideFlags: 0
