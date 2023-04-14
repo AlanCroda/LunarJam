@@ -37,13 +37,8 @@ public class obstacle : MonoBehaviour
         }
     }
 
-    public void SetSpawner(ObstacleSpawner obstacleSpawner)
-    {
-        spawner = obstacleSpawner;
-    }
-    
     private void OnBecameInvisible()
     {
-        spawner.DestroyObstacle(gameObject);
+        Destroy(gameObject);
     }
 }

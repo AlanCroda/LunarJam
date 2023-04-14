@@ -11,7 +11,7 @@ public class ObstacleSpawner : MonoBehaviour
     [SerializeField] private float amountToSpawn;
     [SerializeField] private float distancePerObstacle = 1;
     private float spawnTimer;
-    private List<GameObject> obstacles = new List<GameObject>();
+    private float lastY = 0f;
 
     private void Update()
     {
@@ -25,20 +25,24 @@ public class ObstacleSpawner : MonoBehaviour
 
     private void Spawn(float amount)
     {
+        var lastY = -999f;
         for (int i = 0; i < amount; i++)
         {
+            var randY = 0f;
+            if (lastY != -999f)
+            {
+                var rand = Random.Range(0, 2);
+                if(rand == 0)
+                    randY = Random.Range(minRange.y, lastY + distancePerObstacle);
+                else
+                    randY = Random.Range(minRange.y, lastY - distancePerObstacle);
+            }
+            else
+                randY = Random.Range(minRange.y, maxRange.y);
             var randX = Random.Range(minRange.x, maxRange.x);
-            var randY = Random.Range(minRange.y, maxRange.y);
+            lastY = randY;
             var pos = new Vector3(randX, randY, 0);
             var obj = Instantiate(obstacle, pos, Quaternion.identity);
-            obstacles.Add(obj);
-            obj.GetComponent<obstacle>().SetSpawner(this);
         }
-    }
-
-    public void DestroyObstacle(GameObject obs)
-    {
-        obstacles.Remove(obs);
-        Destroy(obs);
     }
 }
