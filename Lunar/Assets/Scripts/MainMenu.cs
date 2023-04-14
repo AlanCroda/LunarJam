@@ -14,7 +14,19 @@ namespace LunarJam
             EventSystem.current.SetSelectedGameObject(null);
         }
 
-        public void Play()
+        public void PlayStory()
+        {
+            GameManager.instance.SwitchGameStates(GameState.Story);
+            Play();
+        }
+        
+        public void PlayArcade()
+        {
+            GameManager.instance.SwitchGameStates(GameState.Arcade);
+            Play();
+        }
+        
+        private void Play()
         {
             TransitionManager.instance.Fade(fadeSpeed, () =>
             {

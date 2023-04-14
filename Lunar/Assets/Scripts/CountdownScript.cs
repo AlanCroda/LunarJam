@@ -1,3 +1,4 @@
+using LunarJam;
 using UnityEngine;
 using TMPro;
 
@@ -14,8 +15,14 @@ public class CountdownScript : MonoBehaviour
 
     private void Update()
     {
-        if(currentTime - Time.deltaTime < 0)
-            return;
+        if (currentTime - Time.deltaTime < 0) // Hit Zero
+        {
+            if (GameManager.instance.GetState() == GameState.Arcade)
+                currentTime = startingTime;
+            else
+                return;
+        }
+
         currentTime -= Time.deltaTime;
         text.text = currentTime.ToString("0.00");
     }
