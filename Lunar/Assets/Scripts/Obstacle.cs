@@ -2,6 +2,7 @@ using DG.Tweening;
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using LunarJam;
 using UnityEngine;
 
 public class Obstacle : MonoBehaviour
@@ -27,6 +28,8 @@ public class Obstacle : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
+            Destroy(collision.gameObject);
+            DeathUI.instance.ShowDeathUI();
             Destroy(gameObject);
             OnPlayerCollision(collision.gameObject);
         }
