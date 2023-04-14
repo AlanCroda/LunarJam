@@ -25,4 +25,12 @@ public class obstacle : MonoBehaviour
             rb.velocity = Vector2.right * speed;
         }
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.gameObject.tag == "ArrowTrigger")
+        {
+
+        }
+    }
 }
