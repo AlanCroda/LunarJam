@@ -11,20 +11,20 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float deceleration;
     private Vector2 movementInput;
 
+    private Controls controls;
     internal Rigidbody2D rb;
 
     private void Start()
     {
+        controls = new Controls();
+        controls.Player.Enable();
         rb = GetComponent<Rigidbody2D>();
-    }
-
-    private void OnMove(InputValue value)
-    {
-        movementInput = value.Get<Vector2>();
     }
 
     private void FixedUpdate()
     {
+        movementInput = controls.Player.Move.ReadValue<Vector2>();
+        movementInput.Normalize();
         if (movementInput.magnitude > 0)
         {
             rb.velocity += movementInput * acceleration;
