@@ -1,44 +1,30 @@
+using DG.Tweening;
 using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class obstacle : MonoBehaviour
+public class Obstacle : MonoBehaviour
 {
-    private Rigidbody2D rb;
-    [SerializeField] private float speed;
-    private float startTime = 9.9f;
-    private float currentTime;
-
-    private ObstacleSpawner spawner;
+    protected Rigidbody2D rb;
+    [SerializeField] protected float speed;
+    [SerializeField] protected float size = 1.0f;
     
-    private void Start()
+    protected void Start()
     {
-        currentTime = startTime;
         rb = GetComponent<Rigidbody2D>();
 
         rb.velocity = -Vector3.right * speed;
+        transform.DOScale(transform.localScale * size, 0);
     }
 
-    private void Update()
-    {
-        currentTime -= Time.deltaTime;
-        if(currentTime < 0)
-        {
-            rb.velocity = Vector2.right * speed;
-        }
-    }
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if(collision.gameObject.tag == "ArrowTrigger")
-        {
-
-        }
-    }
-
-    private void OnBecameInvisible()
+    protected void OnBecameInvisible()
     {
         Destroy(gameObject);
+    }
+
+    protected virtual void OnPlayerCollision()
+    {
+
     }
 }
