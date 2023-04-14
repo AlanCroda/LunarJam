@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1786957627331346388}
   - component: {fileID: 1786957627331346389}
+  - component: {fileID: 4659597845208675297}
   - component: {fileID: 1786957627331346390}
   - component: {fileID: 1786957627331346391}
   - component: {fileID: 1786957627331346395}
@@ -88,6 +89,34 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &4659597845208675297
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1786957627331346384}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d73ee18a32c16504289f5c1009a5395f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  styxSpeed: 12
+  styxAcceleration: 1
+  styxDeceleration: 2
+  nixSpeed: 6
+  nixAcceleration: 0.9
+  nixDeceleration: 8
+  kerberosSpeed: 5
+  kerberosAcceleration: 0.7
+  kerberosDeceleration: 12
+  hydraSpeed: 4
+  hydraAcceleration: 0.6
+  hydraDeceleration: 14
+  charonSpeed: 2
+  charonAcceleration: 0.4
+  charonDeceleration: 20
+  startingState: 2
 --- !u!114 &1786957627331346390
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -100,9 +129,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f4665e42e0175e4babd822eb50b0e8b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
-  acceleration: 0.5
-  deceleration: 8
 --- !u!114 &1786957627331346391
 MonoBehaviour:
   m_ObjectHideFlags: 0
