@@ -27,7 +27,6 @@ public class Obstacle : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            Time.timeScale = 0;
             DeathUI.instance.ShowDeathUI();
             Destroy(gameObject);
             OnPlayerCollision(collision.gameObject);

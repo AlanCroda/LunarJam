@@ -24,6 +24,7 @@ namespace LunarJam
         {
             deathUI.SetActive(true);
             isDeathUIActive = true;
+            Time.timeScale = 0;
         }
 
         private void Update()
