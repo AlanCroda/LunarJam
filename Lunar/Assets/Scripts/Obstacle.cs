@@ -28,6 +28,12 @@ public class Obstacle : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             Destroy(gameObject);
+            OnPlayerCollision(collision.gameObject);
         }
+    }
+    
+    protected virtual void OnPlayerCollision(GameObject player)
+    {
+
     }
 }
