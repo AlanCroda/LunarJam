@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - ArrowTrigger
+  - Obstacle
   layers:
   - Default
   - TransparentFX
