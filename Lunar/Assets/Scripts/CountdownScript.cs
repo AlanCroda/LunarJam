@@ -20,7 +20,10 @@ public class CountdownScript : MonoBehaviour
             if (GameManager.instance.GetState() == GameState.Arcade)
                 currentTime = startingTime;
             else
+            {
+                DeathUI.instance.ShowDeathUI();
                 return;
+            }
         }
 
         currentTime -= Time.deltaTime;
