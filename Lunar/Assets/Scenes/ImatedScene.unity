@@ -228,8 +228,9 @@ MonoBehaviour:
   obstacle: {fileID: 3000429852864751073, guid: d07d4cc50d892a849bbd7c2daa8734f0, type: 3}
   minRange: {x: 12, y: 3.25}
   maxRange: {x: 17.5, y: -4.25}
-  timeBetweenSpawns: 0.35
+  timeBetweenSpawns: 0.5
   amountToSpawn: 2
+  distancePerObstacle: 3.5
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0

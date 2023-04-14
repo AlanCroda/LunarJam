@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -9,6 +10,8 @@ public class obstacle : MonoBehaviour
     private float startTime = 9.9f;
     private float currentTime;
 
+    private ObstacleSpawner spawner;
+    
     private void Start()
     {
         currentTime = startTime;
@@ -32,5 +35,15 @@ public class obstacle : MonoBehaviour
         {
 
         }
+    }
+
+    public void SetSpawner(ObstacleSpawner obstacleSpawner)
+    {
+        spawner = obstacleSpawner;
+    }
+    
+    private void OnBecameInvisible()
+    {
+        spawner.DestroyObstacle(gameObject);
     }
 }
