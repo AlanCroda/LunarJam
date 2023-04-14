@@ -6,9 +6,9 @@ using UnityEngine.Windows;
 
 public class PlayerController : MonoBehaviour
 {
-    [SerializeField] private float speed = 5f;
-    [SerializeField] private float acceleration;
-    [SerializeField] private float deceleration;
+    internal float speed;
+    internal float acceleration;
+    internal float deceleration;
     private Vector2 movementInput;
 
     private Controls controls;
