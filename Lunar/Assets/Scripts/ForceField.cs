@@ -6,13 +6,12 @@ namespace LunarJam
 {
     public class ForceField : Obstacle
     {
-        private Rigidbody2D rb;
         private Controls controls;
         private Vector2 movementInput;
 
-        private void Start()
+        protected override void Start()
         {
-            rb = GetComponent<Rigidbody2D>();
+            base.Start();
             controls = new Controls();
             controls.Player.Enable();
         }
@@ -20,7 +19,6 @@ namespace LunarJam
         private void FixedUpdate()
         {
             movementInput = controls.Player.Move.ReadValue<Vector2>();
-            rb.velocity = -Vector2.right * speed;
         }
 
         protected override void OnPlayerCollision(GameObject player)

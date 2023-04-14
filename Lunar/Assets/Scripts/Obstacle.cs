@@ -10,7 +10,7 @@ public class Obstacle : MonoBehaviour
     [SerializeField] protected float speed;
     [SerializeField] protected float size = 1.0f;
     
-    protected void Start()
+    protected virtual void Start()
     {
         rb = GetComponent<Rigidbody2D>();
 
