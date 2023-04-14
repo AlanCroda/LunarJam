@@ -14,9 +14,12 @@ namespace LunarJam
         
         private void FixedUpdate()
         {
-            Vector3 distance = target.position - transform.position;
-            float forceMagnitude = homingStrength/(distance.magnitude * distance.magnitude);
-            rb.AddForce(distance * forceMagnitude);
+            if(target != null)
+            {
+                Vector3 distance = target.position - transform.position;
+                float forceMagnitude = homingStrength / (distance.magnitude * distance.magnitude);
+                rb.AddForce(distance * forceMagnitude);
+            }
         }
     }
 }

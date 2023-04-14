@@ -39,11 +39,13 @@ namespace LunarJam
 
         public void Restart()
         {
+            Time.timeScale = 1;
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
         
         public void QuitToMenu()
         {
+            Time.timeScale = 1;
             TransitionManager.instance.Fade(fadeSpeed, () =>
             {
                 SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
