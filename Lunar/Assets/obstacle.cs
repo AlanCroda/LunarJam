@@ -6,11 +6,23 @@ public class obstacle : MonoBehaviour
 {
     private Rigidbody2D rb;
     [SerializeField] private float speed;
+    private float startTime = 9.9f;
+    private float currentTime;
 
     private void Start()
     {
+        currentTime = startTime;
         rb = GetComponent<Rigidbody2D>();
 
         rb.velocity = -Vector3.right * speed;
+    }
+
+    private void Update()
+    {
+        currentTime -= Time.deltaTime;
+        if(currentTime < 0)
+        {
+            rb.velocity = Vector2.right * speed;
+        }
     }
 }
