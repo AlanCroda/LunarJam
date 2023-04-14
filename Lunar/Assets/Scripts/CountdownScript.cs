@@ -1,23 +1,22 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
 public class CountdownScript : MonoBehaviour
 {
     [SerializeField] private TMP_Text text;
+    [SerializeField] private float startingTime = 10f;
     private float currentTime;
-    private float startingTime = 9.9f;
 
-    void Start()
+    private void Awake()
     {
         currentTime = startingTime;
     }
 
-
-    void Update()
+    private void Update()
     {
+        if(currentTime - Time.deltaTime < 0)
+            return;
         currentTime -= Time.deltaTime;
-        text.text = currentTime.ToString("0.0");
+        text.text = currentTime.ToString("0.00");
     }
 }
