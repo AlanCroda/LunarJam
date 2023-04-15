@@ -6,13 +6,24 @@ namespace LunarJam
 {
     public class Pluto : MonoBehaviour
     {
+        [SerializeField] private AudioClip arriveSound;
         [SerializeField] private float finalX;
         [SerializeField] private float duration;
 
+        private AudioSource source;
+        
+        private void Awake()
+        {
+            source = gameObject.AddComponent<AudioSource>();
+            source.playOnAwake = false;
+        }
+        
         private void Start()
         {
             CountdownScript.instance.OnTimerEnd += () =>
             {
+                source.clip = arriveSound;
+                source.Play();
                 transform.DOMoveX(finalX, duration).OnComplete(() =>
                 {
                     Invoke(nameof(LoadNextScene), 1f);

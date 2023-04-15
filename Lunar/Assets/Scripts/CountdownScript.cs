@@ -38,6 +38,7 @@ public class CountdownScript : MonoBehaviour
                 currentTime = startingTime;
             else
             {
+                hasStarted = false;
                 return;
             }
         }

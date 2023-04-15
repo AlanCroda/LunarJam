@@ -297,5 +297,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 200a95499d168474f84bfb82088c7401, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  arriveSound: {fileID: 8300000, guid: ecdf5313526b1cd44a0c4d75a484d65a, type: 3}
   finalX: 9.5
   duration: 2
