@@ -1,11 +1,10 @@
-using System.Collections;
-using System.Collections.Generic;
+using LunarJam;
 using UnityEngine;
-using UnityEngine.InputSystem;
-using UnityEngine.Windows;
 
 public class PlayerController : MonoBehaviour
 {
+    [SerializeField] private GameObject deathParticles;
+    
     internal float speed;
     internal float acceleration;
     internal float deceleration;
@@ -19,6 +18,11 @@ public class PlayerController : MonoBehaviour
         controls = new Controls();
         controls.Player.Enable();
         rb = GetComponent<Rigidbody2D>();
+        DeathUI.instance.OnPlayerDied += () =>
+        {
+            Instantiate(deathParticles, transform.position, Quaternion.identity);
+            Destroy(gameObject);
+        };
     }
 
     private void FixedUpdate()

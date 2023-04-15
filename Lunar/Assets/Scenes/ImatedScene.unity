@@ -572,6 +572,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4138418902664095923, guid: cab1a37ab669bc5448039d47605760d7, type: 3}
+      propertyPath: timeBeforeActivation
+      value: 0.65
+      objectReference: {fileID: 0}
     - target: {fileID: 4138418902664095925, guid: cab1a37ab669bc5448039d47605760d7, type: 3}
       propertyPath: m_Name
       value: Canvas
@@ -717,5 +721,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1786957627331346390, guid: a15ff322a21be6e4db08d99bae932f55, type: 3}
+      propertyPath: deathParticles
+      value: 
+      objectReference: {fileID: 5102255985020604383, guid: 5223e8943a2709640a8a973344460123, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a15ff322a21be6e4db08d99bae932f55, type: 3}

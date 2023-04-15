@@ -15,6 +15,8 @@ public class CountdownScript : MonoBehaviour
 
     private void Update()
     {
+        if(DeathUI.instance.IsDead())
+            return;
         if (currentTime - Time.deltaTime < 0) // Hit Zero
         {
             if (GameManager.instance.GetState() == GameState.Arcade)

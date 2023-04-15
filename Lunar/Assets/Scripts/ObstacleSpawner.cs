@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
+using LunarJam;
 using UnityEngine;
 
 public class ObstacleSpawner : MonoBehaviour
@@ -12,9 +13,11 @@ public class ObstacleSpawner : MonoBehaviour
     [SerializeField] private float distancePerObstacle = 1;
     private float spawnTimer;
     private float lastY = 0f;
-
+    
     private void Update()
     {
+        if(DeathUI.instance.IsDead())
+            return;
         spawnTimer -= Time.deltaTime;
         if (spawnTimer <= 0)
         {

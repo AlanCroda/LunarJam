@@ -11,9 +11,11 @@ namespace LunarJam
     {
         public static DeathUI instance;
         [SerializeField] private GameObject deathUI;
+        [SerializeField] private float timeBeforeActivation = 1.5f;
         [SerializeField] private float fadeSpeed = 1f;
 
         private bool isDeathUIActive = false;
+        public Action OnPlayerDied;
 
         private void Awake()
         {
@@ -22,14 +24,20 @@ namespace LunarJam
 
         public void ShowDeathUI()
         {
-            deathUI.SetActive(true);
+            Invoke(nameof(ActivateDeathUI), timeBeforeActivation);
             isDeathUIActive = true;
-            Time.timeScale = 0;
+            OnPlayerDied?.Invoke();
+            //Time.timeScale = 0;
         }
 
+        private void ActivateDeathUI()
+        {
+            deathUI.SetActive(true);
+        }
+        
         private void Update()
         {
-            if (isDeathUIActive)
+            if (deathUI.activeSelf)
             {
                 if(Keyboard.current.rKey.wasPressedThisFrame)
                     Restart();
@@ -51,6 +59,11 @@ namespace LunarJam
             {
                 SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
             });
+        }
+
+        public bool IsDead()
+        {
+            return isDeathUIActive;
         }
     }
 }
