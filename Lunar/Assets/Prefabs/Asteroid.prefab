@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 4316952149378836743}
   - component: {fileID: 7769153122038010887}
   - component: {fileID: -8613964338289361165}
+  - component: {fileID: -8976167678938464547}
   m_Layer: 0
   m_Name: Asteroid
   m_TagString: Obstacle
@@ -73,10 +74,10 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1143160271
+  m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 0ac55f9f886d827408c102bdf33c5ff7, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 90bcb4978ac479d41aa015eaa788a0e3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -135,9 +136,25 @@ CircleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.52
+  m_Radius: 0.25
+--- !u!114 &-8976167678938464547
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6553059720348445694}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b575454231e22c4a89352db1dab15bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skins:
+  - {fileID: 21300000, guid: 0f4db4d5bf67715438c7cf6e0fc5d658, type: 3}
+  - {fileID: 21300000, guid: 90bcb4978ac479d41aa015eaa788a0e3, type: 3}
+  - {fileID: 21300000, guid: da161b9b45bd9b042a993b567b44409b, type: 3}

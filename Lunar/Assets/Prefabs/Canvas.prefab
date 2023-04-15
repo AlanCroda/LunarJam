@@ -938,6 +938,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   deathUI: {fileID: 4138418901350675943}
+  timeBeforeActivation: 0.65
   fadeSpeed: 0.5
 --- !u!1 &4138418902934142223
 GameObject:
