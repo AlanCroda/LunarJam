@@ -32,6 +32,7 @@ public class PlayerController : MonoBehaviour
             else
             {
                 rb.isKinematic = true;
+                rb.bodyType = RigidbodyType2D.Kinematic;
                 transform.DOMove(new Vector3(3f, 0f, 0f), 1.5f);
             }
         };
