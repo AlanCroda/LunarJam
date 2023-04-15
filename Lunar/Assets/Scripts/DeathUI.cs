@@ -32,7 +32,6 @@ namespace LunarJam
         private void ActivateDeathUI()
         {
             deathUI.SetActive(true);
-            Time.timeScale = 0;
         }
 
         private void Update()

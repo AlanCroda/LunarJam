@@ -18,7 +18,7 @@ namespace LunarJam
             instance = this;
         }
 
-        public void Fade( float duration, Action onComplete)
+        public void Fade(float duration, Action onComplete)
         {
             if(isFading)
                 return;

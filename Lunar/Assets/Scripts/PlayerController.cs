@@ -24,6 +24,10 @@ public class PlayerController : MonoBehaviour
             Instantiate(deathParticles, transform.position, Quaternion.identity);
             Destroy(gameObject);
         };
+        CountdownScript.instance.OnTimerEnd += () =>
+        {
+            GetComponent<PlanetData>().SwitchNextMoon();
+        };
         screenBounds = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width,Screen.height,Camera.main.transform.position.z));
         objectSize = transform.GetComponent<CircleCollider2D>().radius;
     }
