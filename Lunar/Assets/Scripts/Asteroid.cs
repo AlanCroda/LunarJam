@@ -11,9 +11,9 @@ namespace LunarJam
         protected override void Awake()
         {
             base.Awake();
-            sineSpeed = Random.Range(sineSpeed - 2f, sineSpeed + 3f);
+            //sineSpeed = Random.Range(sineSpeed - 2f, sineSpeed + 3f);
         }
-
+        
         private void Update()
         {
             var newY = transform.position.y + amplitude * Mathf.Sin(Time.time * frequency);

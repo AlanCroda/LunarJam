@@ -26,7 +26,6 @@ public class Obstacle : MonoBehaviour
         {
             CameraShake.instance.Shake();
             DeathUI.instance.ShowDeathUI();
-            Destroy(gameObject);
             OnPlayerCollision(collision.gameObject);
         }
     }
