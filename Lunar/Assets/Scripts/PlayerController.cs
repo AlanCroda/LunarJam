@@ -14,6 +14,7 @@ public class PlayerController : MonoBehaviour
     private float objectSize;
     private Controls controls;
     internal Rigidbody2D rb;
+    private bool canMove = true;
 
     private void Start()
     {
@@ -31,8 +32,7 @@ public class PlayerController : MonoBehaviour
                 GetComponent<PlanetData>().SwitchNextMoon();
             else
             {
-                rb.isKinematic = true;
-                rb.bodyType = RigidbodyType2D.Kinematic;
+                canMove = false;
                 transform.DOMove(new Vector3(3f, 0f, 0f), 1.5f);
             }
         };
@@ -57,6 +57,8 @@ public class PlayerController : MonoBehaviour
 
     private void LateUpdate()
     {
+        if(!canMove)
+            return;
         Vector3 viewPos = transform.position;
         viewPos.x = Mathf.Clamp(viewPos.x, screenBounds.x * -1 + objectSize, screenBounds.x - objectSize);
         viewPos.y = Mathf.Clamp(viewPos.y, screenBounds.y * -1 + objectSize, screenBounds.y - objectSize);
