@@ -12,6 +12,8 @@ namespace LunarJam
 
         private void Update()
         {
+            if(DeathUI.instance.IsDead())
+                return;
             if (isPaused)
             {
                 if (Keyboard.current.escapeKey.wasPressedThisFrame)
