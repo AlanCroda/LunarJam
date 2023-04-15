@@ -364,6 +364,11 @@ MonoBehaviour:
   charonAcceleration: 0.4
   charonDeceleration: 20
   startingState: 1
+  styxSprite: {fileID: 21300000, guid: 2246ad644b2984c4a83fe9d8736f1807, type: 3}
+  nixSprite: {fileID: 21300000, guid: f12e3af5d54991441adb9136b1a980af, type: 3}
+  kerberosSprite: {fileID: 21300000, guid: c3d6442da0bdd7342afbc1c5df56beab, type: 3}
+  hydraSprite: {fileID: 21300000, guid: 562f773a100b84e4a8c9a5d7900c7034, type: 3}
+  charonSprite: {fileID: 21300000, guid: d8e611eff7b98af419d043ae0b136383, type: 3}
 --- !u!114 &1786957627331346390
 MonoBehaviour:
   m_ObjectHideFlags: 0
