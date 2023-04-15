@@ -27,14 +27,14 @@ namespace LunarJam
             Invoke(nameof(ActivateDeathUI), timeBeforeActivation);
             isDeathUIActive = true;
             OnPlayerDied?.Invoke();
-            //Time.timeScale = 0;
         }
 
         private void ActivateDeathUI()
         {
             deathUI.SetActive(true);
+            Time.timeScale = 0;
         }
-        
+
         private void Update()
         {
             if (deathUI.activeSelf)

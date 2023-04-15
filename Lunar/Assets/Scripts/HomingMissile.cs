@@ -17,9 +17,13 @@ namespace LunarJam
         {
             if(target != null)
             {
-                Vector3 distance = target.position - transform.position;
-                float forceMagnitude = homingStrength / (distance.magnitude * distance.magnitude);
-                rb.AddForce(distance * forceMagnitude);
+                if(target.position.x < transform.position.x)
+                {
+                    Vector3 distance = target.position - transform.position;
+                    float forceMagnitude = homingStrength / (distance.magnitude * distance.magnitude);
+                    rb.AddForce(distance * forceMagnitude);
+                }
+                transform.rotation = Quaternion.LookRotation(Vector3.forward * 500, rb.velocity);
             }
         }
     }
