@@ -24,6 +24,7 @@ public class Obstacle : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
+            CameraShake.instance.Shake();
             DeathUI.instance.ShowDeathUI();
             Destroy(gameObject);
             OnPlayerCollision(collision.gameObject);
