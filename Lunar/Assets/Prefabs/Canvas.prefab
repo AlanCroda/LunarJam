@@ -184,7 +184,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: '[Q] to Quit'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: a3bb06c52db6b774c9a7393a1977e58f, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: f8502af7f1c15fb448d8a7dcbb9da373, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -209,7 +209,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 64
+  m_fontSize: 96
   m_fontSizeBase: 96
   m_fontWeight: 400
   m_enableAutoSizing: 0
@@ -1892,7 +1892,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: '[Esc] to Resume'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: a3bb06c52db6b774c9a7393a1977e58f, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: f8502af7f1c15fb448d8a7dcbb9da373, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -1917,7 +1917,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 64
+  m_fontSize: 96
   m_fontSizeBase: 96
   m_fontWeight: 400
   m_enableAutoSizing: 0

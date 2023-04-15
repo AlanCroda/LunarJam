@@ -35,7 +35,6 @@ namespace LunarJam
             {
                 CameraShake.instance.Shake();
                 DeathUI.instance.ShowDeathUI();
-                Destroy(gameObject);
             }
         }
 
@@ -45,7 +44,6 @@ namespace LunarJam
             {
                 CameraShake.instance.Shake();
                 DeathUI.instance.ShowDeathUI();
-                Destroy(gameObject);
             }
         }
     }
