@@ -12,7 +12,6 @@ public class ObstacleSpawner : MonoBehaviour
     [SerializeField] private float amountToSpawn;
     [SerializeField] private float distancePerObstacle = 1;
     private float spawnTimer;
-    private float lastY = 0f;
     
     private void Update()
     {

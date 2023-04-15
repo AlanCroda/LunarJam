@@ -9,7 +9,8 @@ public class PlayerController : MonoBehaviour
     internal float acceleration;
     internal float deceleration;
     private Vector2 movementInput;
-
+    private Vector2 screenBounds;
+    private float objectSize;
     private Controls controls;
     internal Rigidbody2D rb;
 
@@ -23,6 +24,8 @@ public class PlayerController : MonoBehaviour
             Instantiate(deathParticles, transform.position, Quaternion.identity);
             Destroy(gameObject);
         };
+        screenBounds = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width,Screen.height,Camera.main.transform.position.z));
+        objectSize = transform.GetComponent<CircleCollider2D>().radius;
     }
 
     private void FixedUpdate()
@@ -38,5 +41,13 @@ public class PlayerController : MonoBehaviour
         {
             rb.velocity = Vector2.Lerp(rb.velocity, Vector2.zero, Time.deltaTime * deceleration);
         }
+    }
+
+    private void LateUpdate()
+    {
+        Vector3 viewPos = transform.position;
+        viewPos.x = Mathf.Clamp(viewPos.x, screenBounds.x * -1 + objectSize, screenBounds.x - objectSize);
+        viewPos.y = Mathf.Clamp(viewPos.y, screenBounds.y * -1 + objectSize, screenBounds.y - objectSize);
+        transform.position = viewPos;
     }
 }
