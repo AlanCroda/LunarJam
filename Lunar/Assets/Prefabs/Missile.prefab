@@ -99,7 +99,7 @@ GameObject:
   - component: {fileID: 1128330118994578957}
   m_Layer: 0
   m_Name: Missile
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -134,6 +134,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 5
   size: 1
+  temporaryArrow: {fileID: -6485554436413313012, guid: e9172475b7bfe1c4ebda459477f30916, type: 3}
   homingStrength: 70
 --- !u!50 &3024322759509458893
 Rigidbody2D:

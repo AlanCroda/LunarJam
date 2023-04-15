@@ -13,7 +13,7 @@ namespace LunarJam
         {
             controls = new Controls();
             controls.Player.Enable();
-            transform.position = new Vector3(transform.position.x, 0f);
+            //transform.position = new Vector3(transform.position.x, 0f);
         }
 
         private void FixedUpdate()

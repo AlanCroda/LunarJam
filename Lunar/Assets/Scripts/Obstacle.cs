@@ -7,6 +7,8 @@ public class Obstacle : MonoBehaviour
     protected Rigidbody2D rb;
     [SerializeField] protected float speed;
     [SerializeField] protected float size = 1.0f;
+    [SerializeField] private arrow temporaryArrow;
+    private arrow cloneArrow;
 
     protected virtual void Awake()
     {
@@ -28,12 +30,28 @@ public class Obstacle : MonoBehaviour
             DeathUI.instance.ShowDeathUI();
             OnPlayerCollision(collision.gameObject);
         }
+        if (collision.gameObject.CompareTag("ArrowTrigger"))
+        {
+            cloneArrow = Instantiate(temporaryArrow, new Vector3(8.5f, gameObject.transform.position.y), Quaternion.identity);
+        }
     }
 
     private void OnTriggerStay2D(Collider2D other)
     {
         if (other.gameObject.CompareTag("Player"))
             OnPlayerCollision(other.gameObject);
+        if (other.gameObject.CompareTag("ArrowTrigger"))
+        {
+            temporaryArrow.transform.position = new Vector3(temporaryArrow.transform.position.x, gameObject.transform.position.y, 0);
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("ArrowTrigger") && cloneArrow != null)
+        {
+            Destroy(cloneArrow.gameObject);
+        }
     }
 
     protected virtual void OnPlayerCollision(GameObject player)
