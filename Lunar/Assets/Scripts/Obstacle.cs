@@ -30,9 +30,9 @@ public class Obstacle : MonoBehaviour
             DeathUI.instance.ShowDeathUI();
             OnPlayerCollision(collision.gameObject);
         }
-        if (collision.gameObject.CompareTag("ArrowTrigger"))
+        if (collision.gameObject.CompareTag("ArrowTrigger") && speed >= 10 || collision.gameObject.CompareTag("ArrowTrigger") && this is HomingMissile)
         {
-            cloneArrow = Instantiate(temporaryArrow, new Vector3(8.5f, gameObject.transform.position.y), Quaternion.identity);
+            cloneArrow = Instantiate(temporaryArrow, new Vector3(8.25f, gameObject.transform.position.y), Quaternion.Euler(0f, 0f, 90f));
         }
     }
 
@@ -42,7 +42,7 @@ public class Obstacle : MonoBehaviour
             OnPlayerCollision(other.gameObject);
         if (other.gameObject.CompareTag("ArrowTrigger"))
         {
-            temporaryArrow.transform.position = new Vector3(temporaryArrow.transform.position.x, gameObject.transform.position.y, 0);
+            temporaryArrow.transform.position = new Vector3(temporaryArrow.transform.position.x, transform.position.y, 0);
         }
     }
 
