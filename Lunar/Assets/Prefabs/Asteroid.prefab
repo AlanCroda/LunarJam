@@ -103,6 +103,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 7.5
   size: 1
+  temporaryArrow: {fileID: -6485554436413313012, guid: e9172475b7bfe1c4ebda459477f30916, type: 3}
   amplitude: 0.5
   frequency: 8
   sineSpeed: 10
