@@ -8,25 +8,38 @@ public class CountdownScript : MonoBehaviour
     public static CountdownScript instance;
 
     [SerializeField] private TMP_Text text;
+    [SerializeField] private float startingDelay = 1.25f;
     [SerializeField] private float startingTime = 10f;
     private float currentTime;
 
     public Action OnTimerEnd;
+    private bool hasStarted = false;
     
     private void Awake()
     {
         currentTime = startingTime;
         instance = this;
+        Invoke(nameof(StartTimer), startingDelay);
     }
 
+    private void StartTimer()
+    {
+        hasStarted = true;
+    }
+    
     private void Update()
     {
-        if(DeathUI.instance.IsDead())
+        if(DeathUI.instance.IsDead() || !hasStarted)
             return;
         if (currentTime - Time.deltaTime < 0) // Hit Zero
         {
             OnTimerEnd?.Invoke();
-            currentTime = startingTime;
+            if(GameManager.instance.GetState() == GameState.Arcade)
+                currentTime = startingTime;
+            else
+            {
+                return;
+            }
         }
 
         currentTime -= Time.deltaTime;

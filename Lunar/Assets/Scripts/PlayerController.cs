@@ -1,3 +1,4 @@
+using DG.Tweening;
 using LunarJam;
 using UnityEngine;
 
@@ -26,7 +27,13 @@ public class PlayerController : MonoBehaviour
         };
         CountdownScript.instance.OnTimerEnd += () =>
         {
-            GetComponent<PlanetData>().SwitchNextMoon();
+            if (GameManager.instance.GetState() == GameState.Arcade)
+                GetComponent<PlanetData>().SwitchNextMoon();
+            else
+            {
+                rb.isKinematic = true;
+                transform.DOMove(new Vector3(3f, 0f, 0f), 1.5f);
+            }
         };
         screenBounds = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width,Screen.height,Camera.main.transform.position.z));
         objectSize = transform.GetComponent<CircleCollider2D>().radius;

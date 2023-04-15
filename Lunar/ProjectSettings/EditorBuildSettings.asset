@@ -12,6 +12,12 @@ EditorBuildSettings:
     path: Assets/Scenes/ImatedScene.unity
     guid: 011da47bf6586c247a037c0313487ea0
   - enabled: 1
+    path: Assets/Scenes/Level 2.unity
+    guid: 115a7018a34dd6d4d9f11c80ff98dedf
+  - enabled: 1
+    path: Assets/Scenes/Level 3.unity
+    guid: 1de01727ff91c7d448d0a237cba8e4e5
+  - enabled: 1
     path: Assets/Scenes/RaduScene.unity
     guid: 1de410411244a974a827516ef16ae5f9
   m_configObjects: {}
