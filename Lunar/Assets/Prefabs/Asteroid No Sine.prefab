@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 6553059720348445665}
   - component: {fileID: 8287977603877547598}
   - component: {fileID: -4975371445148352856}
+  - component: {fileID: -1524366499693494487}
   m_Layer: 0
   m_Name: Asteroid No Sine
   m_TagString: Obstacle
@@ -155,3 +156,16 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 0f4db4d5bf67715438c7cf6e0fc5d658, type: 3}
   - {fileID: 21300000, guid: 90bcb4978ac479d41aa015eaa788a0e3, type: 3}
   - {fileID: 21300000, guid: da161b9b45bd9b042a993b567b44409b, type: 3}
+--- !u!114 &-1524366499693494487
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6553059720348445694}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c236b7fdbacca6f4ab21ebbad52d4d69, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotationSpeed: 1

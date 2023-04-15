@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 7769153122038010887}
   - component: {fileID: -8613964338289361165}
   - component: {fileID: -8976167678938464547}
+  - component: {fileID: -1026691611641828312}
   m_Layer: 0
   m_Name: Asteroid
   m_TagString: Obstacle
@@ -158,3 +159,16 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 0f4db4d5bf67715438c7cf6e0fc5d658, type: 3}
   - {fileID: 21300000, guid: 90bcb4978ac479d41aa015eaa788a0e3, type: 3}
   - {fileID: 21300000, guid: da161b9b45bd9b042a993b567b44409b, type: 3}
+--- !u!114 &-1026691611641828312
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6553059720348445694}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c236b7fdbacca6f4ab21ebbad52d4d69, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotationSpeed: 1
