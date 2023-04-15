@@ -31,6 +31,7 @@ namespace LunarJam
             TransitionManager.instance.Fade(fadeSpeed, () =>
             {
                 SceneManager.LoadScene(gameplaySceneName);
+                BGMusic.instance.ChangeClip();
             });
         }
 
