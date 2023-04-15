@@ -33,6 +33,7 @@ public class PlayerController : MonoBehaviour
             else
             {
                 canMove = false;
+                rb.velocity = Vector2.zero;
                 transform.DOMove(new Vector3(3f, 0f, 0f), 1.5f);
             }
         };
@@ -42,6 +43,8 @@ public class PlayerController : MonoBehaviour
 
     private void FixedUpdate()
     {
+        if(!canMove)
+            return;
         movementInput = controls.Player.Move.ReadValue<Vector2>();
         movementInput.Normalize();
         if (movementInput.magnitude > 0)
