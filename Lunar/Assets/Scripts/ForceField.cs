@@ -28,5 +28,25 @@ namespace LunarJam
                 print("argh");
             }
         }
+
+        private void OnTriggerEnter2D(Collider2D collision)
+        {
+            if (collision.gameObject.CompareTag("Player") && movementInput.magnitude != 0)
+            {
+                CameraShake.instance.Shake();
+                DeathUI.instance.ShowDeathUI();
+                Destroy(gameObject);
+            }
+        }
+
+        private void OnTriggerStay2D(Collider2D collision)
+        {
+            if (collision.gameObject.CompareTag("Player") && movementInput.magnitude != 0)
+            {
+                CameraShake.instance.Shake();
+                DeathUI.instance.ShowDeathUI();
+                Destroy(gameObject);
+            }
+        }
     }
 }
