@@ -10,7 +10,7 @@ namespace LunarJam
 
         private void Start()
         {
-            target = FindObjectOfType<PlayerController>().transform;
+            target = FindObjectOfType<PlayerController>()?.transform;
         }
         
         private void FixedUpdate()

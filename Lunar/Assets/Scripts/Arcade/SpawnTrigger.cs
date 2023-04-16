@@ -9,6 +9,7 @@ namespace LunarJam
             if (col.CompareTag("Obstacle"))
             {
                 ObstacleSpawner.instance.SpawnNextArea();
+                Destroy(col.gameObject, 7.5f);
             }
         }
     }
