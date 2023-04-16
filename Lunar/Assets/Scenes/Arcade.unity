@@ -371,6 +371,16 @@ MonoBehaviour:
       prefab: {fileID: 6553270975702057969, guid: d28f328882450d64f877e6edcf0011be, type: 3}
     - weight: 15
       prefab: {fileID: 3716704607276265104, guid: 3859441704d6a664c8f16ecccdc83d9b, type: 3}
+    - weight: 15
+      prefab: {fileID: 1565501941107406995, guid: 76e8898badd1f4a4b89153dbac599cf8, type: 3}
+    - weight: 25
+      prefab: {fileID: 4715295350508532598, guid: e54334af5775fd242a079ba2586c189c, type: 3}
+    - weight: 35
+      prefab: {fileID: 285956473665446178, guid: 5ebde028beaf97f4b96958ba58d2e1cb, type: 3}
+    - weight: 15
+      prefab: {fileID: 1545320358962879831, guid: cf6c96d9a82169748b4619813750da0c, type: 3}
+    - weight: 10
+      prefab: {fileID: 4424681217326648678, guid: 3647053dbe3bb7a4a84dd4f1b418928a, type: 3}
   maxAreas: 10
 --- !u!1 &500085168
 GameObject:
