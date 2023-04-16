@@ -352,8 +352,8 @@ MonoBehaviour:
   styxAcceleration: 1
   styxDeceleration: 2
   nixSpeed: 6
-  nixAcceleration: 0.9
-  nixDeceleration: 8
+  nixAcceleration: 0.8
+  nixDeceleration: 4
   kerberosSpeed: 5
   kerberosAcceleration: 0.7
   kerberosDeceleration: 12
