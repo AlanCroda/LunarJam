@@ -55,5 +55,10 @@ namespace LunarJam
             volume = newValue;
             AudioListener.volume = volume;
         }
+
+        public void SetVolumeSlider(Slider slider)
+        {
+            volumeSlider = slider;
+        }
     }
 }
