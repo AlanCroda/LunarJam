@@ -30,6 +30,7 @@ namespace LunarJam
             SceneManager.sceneLoaded += (scene, mode) =>
             {
                 AudioListener.volume = volume;
+                volumeSlider = FindObjectOfType<Slider>();
             };
             volume = 1;
         }
