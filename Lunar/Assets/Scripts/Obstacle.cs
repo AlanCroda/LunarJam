@@ -32,7 +32,7 @@ public class Obstacle : MonoBehaviour
         }
         if (collision.gameObject.CompareTag("ArrowTrigger") && this is HomingMissile)
         {
-            cloneArrow = Instantiate(temporaryArrow, new Vector3(8.25f, gameObject.transform.position.y), Quaternion.Euler(0f, 0f, 90f));
+            cloneArrow = Instantiate(temporaryArrow, new Vector3(8.25f, gameObject.transform.position.y), Quaternion.identity);
         }
     }
 
