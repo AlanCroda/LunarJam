@@ -58,6 +58,7 @@ namespace LunarJam
 
         public void SetVolumeSlider(Slider slider)
         {
+            volumeSlider.onValueChanged.AddListener(OnVolumeSliderValueChanged);
             volumeSlider = slider;
         }
     }
