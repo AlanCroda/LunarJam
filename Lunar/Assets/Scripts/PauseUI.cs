@@ -17,14 +17,13 @@ namespace LunarJam
             if (isPaused)
             {
                 if (Keyboard.current.escapeKey.wasPressedThisFrame)
-                {
                     UnPause();
-                }
+                else if(Keyboard.current.qKey.wasPressedThisFrame)
+                    DeathUI.instance.QuitToMenu();
             }
             else if (Keyboard.current.escapeKey.wasPressedThisFrame)
-            {
                 Pause();
-            }
+            
         }
 
         public void Pause()

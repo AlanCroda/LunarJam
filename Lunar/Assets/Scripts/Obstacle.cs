@@ -30,7 +30,7 @@ public class Obstacle : MonoBehaviour
             DeathUI.instance.ShowDeathUI();
             OnPlayerCollision(collision.gameObject);
         }
-        if (collision.gameObject.CompareTag("ArrowTrigger") && speed >= 10 || collision.gameObject.CompareTag("ArrowTrigger") && this is HomingMissile)
+        if (collision.gameObject.CompareTag("ArrowTrigger") && this is HomingMissile)
         {
             cloneArrow = Instantiate(temporaryArrow, new Vector3(8.25f, gameObject.transform.position.y), Quaternion.Euler(0f, 0f, 90f));
         }
