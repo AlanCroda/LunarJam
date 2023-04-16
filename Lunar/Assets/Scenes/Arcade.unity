@@ -365,7 +365,7 @@ MonoBehaviour:
       prefab: {fileID: 4493087017531243465, guid: 00cc3c66ab7511941b0b52f8a500fa66, type: 3}
     - weight: 20
       prefab: {fileID: 9210209275365870912, guid: 31b46ae4d8d34fa4f846f6854fba3e3e, type: 3}
-    - weight: 10
+    - weight: 20
       prefab: {fileID: 6532227112599700942, guid: 3d9e732047ffc084797baade9ed5cfbe, type: 3}
     - weight: 5
       prefab: {fileID: 6553270975702057969, guid: d28f328882450d64f877e6edcf0011be, type: 3}
@@ -385,7 +385,7 @@ MonoBehaviour:
       prefab: {fileID: 2121041497905514666, guid: 89089a54b4ead5b44a33f7dc72f82761, type: 3}
     - weight: 10
       prefab: {fileID: 4152636336674186603, guid: 141849587b6603f47be4cc8d58b4ab63, type: 3}
-    - weight: 15
+    - weight: 20
       prefab: {fileID: 494091292567185152, guid: 1d067e89214494c4a91495a7f7258e1a, type: 3}
     - weight: 30
       prefab: {fileID: 5509793281977386539, guid: 141c42a6294f9434fa98e86bf5dcb302, type: 3}

@@ -32,7 +32,7 @@ namespace LunarJam
                 AudioListener.volume = volume;
                 volumeSlider = FindObjectOfType<Slider>();
             };
-            volume = 1;
+            volume = volumeSlider.value;
         }
 
         public void SwitchGameStates(GameState newState)
