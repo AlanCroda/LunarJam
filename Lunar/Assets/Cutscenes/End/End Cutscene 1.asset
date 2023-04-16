@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cutsceneSprite: {fileID: 21300000, guid: ed79115396d672a4f8e0289cc6f22c2d, type: 3}
   cutsceneText: After the moons reached Pluto at such dangerously high speeds, the
-    5 Moons went way beyond their original orbit, and crashed straight into the Pluto!
+    5 Moons went way beyond their original orbit, and crashed straight into Pluto!
