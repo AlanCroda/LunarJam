@@ -27,7 +27,7 @@ Transform:
   m_GameObject: {fileID: 339701499}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2.75, y: 2.75, z: 2.75}
+  m_LocalScale: {x: 10, y: 10, z: 10}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 1786957627331346388}
@@ -74,7 +74,7 @@ SpriteRenderer:
   m_SortingLayerID: -1070791173
   m_SortingLayer: 3
   m_SortingOrder: -1
-  m_Sprite: {fileID: -2413806693520163455, guid: c05b4db6e6e544e4f85183eb8f1232f0, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 2eb82cec73aa6ae47a1591d95feb4f74, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 0.101960786}
   m_FlipX: 0
   m_FlipY: 0
@@ -109,7 +109,6 @@ GameObject:
   m_Component:
   - component: {fileID: 343449956}
   - component: {fileID: 343449957}
-  - component: {fileID: 343449958}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -184,20 +183,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &343449958
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 343449955}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e325371cc51b09f4a93a766b8bcf64ab, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  newScale: 1.15
-  duration: 1.5
 --- !u!1 &1142689977
 GameObject:
   m_ObjectHideFlags: 0
@@ -225,7 +210,7 @@ Transform:
   m_GameObject: {fileID: 1142689977}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2.25, y: 2.25, z: 2.25}
+  m_LocalScale: {x: 6.5, y: 6.5, z: 6.5}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 1786957627331346388}
@@ -272,7 +257,7 @@ SpriteRenderer:
   m_SortingLayerID: -1070791173
   m_SortingLayer: 3
   m_SortingOrder: -1
-  m_Sprite: {fileID: -2413806693520163455, guid: c05b4db6e6e544e4f85183eb8f1232f0, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 2eb82cec73aa6ae47a1591d95feb4f74, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 0.101960786}
   m_FlipX: 0
   m_FlipY: 0
@@ -351,28 +336,28 @@ MonoBehaviour:
   styxSpeed: 12
   styxAcceleration: 1
   styxDeceleration: 2
-  styxInnerGlow: 1
-  styxOuterGlow: 0.85
+  styxInnerGlow: 3.25
+  styxOuterGlow: 2.5
   nixSpeed: 6
   nixAcceleration: 0.8
   nixDeceleration: 4
-  nixInnerGlow: 1.15
-  nixOuterGlow: 1
+  nixInnerGlow: 4
+  nixOuterGlow: 3
   kerberosSpeed: 5
   kerberosAcceleration: 0.7
   kerberosDeceleration: 12
-  kerberosInnerGlow: 1.5
-  kerberosOuterGlow: 1.25
+  kerberosInnerGlow: 6
+  kerberosOuterGlow: 4
   hydraSpeed: 4
   hydraAcceleration: 0.6
   hydraDeceleration: 14
-  hydraInnerGlow: 1.75
-  hydraOuterGlow: 1.45
+  hydraInnerGlow: 8
+  hydraOuterGlow: 5.25
   charonSpeed: 3
   charonAcceleration: 0.4
   charonDeceleration: 20
-  charonInnerGlow: 2.75
-  charonOuterGlow: 2.25
+  charonInnerGlow: 10
+  charonOuterGlow: 6.5
   startingState: 1
   styxSprite: {fileID: 21300000, guid: 2246ad644b2984c4a83fe9d8736f1807, type: 3}
   nixSprite: {fileID: 21300000, guid: f12e3af5d54991441adb9136b1a980af, type: 3}
