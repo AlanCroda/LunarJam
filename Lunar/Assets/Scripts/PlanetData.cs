@@ -8,11 +8,13 @@ namespace LunarJam
     {
         private PlayerController playerController;
         private SpriteRenderer spriteRenderer;
+        private CircleCollider2D circleCollider;
 
         [Header("Styx")]
         [SerializeField] private float styxSpeed;
         [SerializeField] private float styxAcceleration;
         [SerializeField] private float styxDeceleration;
+        [SerializeField] private float styxColliderRadius;
         [SerializeField] private float styxInnerGlow;
         [SerializeField] private float styxOuterGlow;
         
@@ -20,6 +22,7 @@ namespace LunarJam
         [SerializeField] private float nixSpeed;
         [SerializeField] private float nixAcceleration;
         [SerializeField] private float nixDeceleration;
+        [SerializeField] private float nixColliderRadius;
         [SerializeField] private float nixInnerGlow;
         [SerializeField] private float nixOuterGlow;
         
@@ -27,6 +30,7 @@ namespace LunarJam
         [SerializeField] private float kerberosSpeed;
         [SerializeField] private float kerberosAcceleration;
         [SerializeField] private float kerberosDeceleration;
+        [SerializeField] private float kerberosColliderRadius;
         [SerializeField] private float kerberosInnerGlow;
         [SerializeField] private float kerberosOuterGlow;
         
@@ -34,6 +38,7 @@ namespace LunarJam
         [SerializeField] private float hydraSpeed;
         [SerializeField] private float hydraAcceleration;
         [SerializeField] private float hydraDeceleration;
+        [SerializeField] private float hydraColliderRadius;
         [SerializeField] private float hydraInnerGlow;
         [SerializeField] private float hydraOuterGlow;
         
@@ -41,6 +46,7 @@ namespace LunarJam
         [SerializeField] private float charonSpeed;
         [SerializeField] private float charonAcceleration;
         [SerializeField] private float charonDeceleration;
+        [SerializeField] private float charonColliderRadius;
         [SerializeField] private float charonInnerGlow;
         [SerializeField] private float charonOuterGlow;
 
@@ -78,6 +84,7 @@ namespace LunarJam
         {
             playerController = GetComponent<PlayerController>();
             spriteRenderer = GetComponentInChildren<SpriteRenderer>();
+            circleCollider = GetComponent<CircleCollider2D>();
             currentPlanet = startingState;
         }
 
@@ -92,6 +99,7 @@ namespace LunarJam
                     spriteRenderer.sprite = styxSprite;
                     glowOuterRenderer.transform.localScale = Vector3.one * styxOuterGlow;
                     glowInnerRenderer.transform.localScale = Vector3.one * styxInnerGlow;
+                    circleCollider.radius = styxColliderRadius;
                     break;
                 case State.Nix:
                     playerController.speed = nixSpeed;
@@ -100,6 +108,7 @@ namespace LunarJam
                     spriteRenderer.sprite = nixSprite;
                     glowOuterRenderer.transform.localScale = Vector3.one * nixOuterGlow;
                     glowInnerRenderer.transform.localScale = Vector3.one * nixInnerGlow;
+                    circleCollider.radius = nixColliderRadius;
                     break;
                 case State.Kerberos:
                     playerController.speed = kerberosSpeed;
@@ -108,6 +117,7 @@ namespace LunarJam
                     spriteRenderer.sprite = kerberosSprite;
                     glowOuterRenderer.transform.localScale = Vector3.one * kerberosOuterGlow;
                     glowInnerRenderer.transform.localScale = Vector3.one * kerberosInnerGlow;
+                    circleCollider.radius = kerberosColliderRadius;
                     break;
                 case State.Hydra:
                     playerController.speed = hydraSpeed;
@@ -116,6 +126,7 @@ namespace LunarJam
                     spriteRenderer.sprite = hydraSprite;
                     glowOuterRenderer.transform.localScale = Vector3.one * hydraOuterGlow;
                     glowInnerRenderer.transform.localScale = Vector3.one * hydraInnerGlow;
+                    circleCollider.radius = hydraColliderRadius;
                     break;
                 case State.Charon:
                     playerController.speed = charonSpeed;
@@ -124,6 +135,7 @@ namespace LunarJam
                     spriteRenderer.sprite = charonSprite;
                     glowOuterRenderer.transform.localScale = Vector3.one * charonOuterGlow;
                     glowInnerRenderer.transform.localScale = Vector3.one * charonInnerGlow;
+                    circleCollider.radius = charonColliderRadius;
                     break;
             }
         }

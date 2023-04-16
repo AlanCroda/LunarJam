@@ -4781,5 +4781,9 @@ PrefabInstance:
       propertyPath: startingState
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4659597845208675297, guid: a15ff322a21be6e4db08d99bae932f55, type: 3}
+      propertyPath: styxColliderRadius
+      value: 0.28
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a15ff322a21be6e4db08d99bae932f55, type: 3}
