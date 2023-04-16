@@ -1812,7 +1812,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 417406437405588321, guid: 699cd372d3a56d043894cb0d5705d325, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 417406437405588323, guid: 699cd372d3a56d043894cb0d5705d325, type: 3}
       propertyPath: m_RootOrder
@@ -2133,7 +2133,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4138418902664095925, guid: cab1a37ab669bc5448039d47605760d7, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6319323649874873069, guid: cab1a37ab669bc5448039d47605760d7, type: 3}
       propertyPath: m_fontSizeBase
