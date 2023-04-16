@@ -8,6 +8,7 @@ namespace LunarJam
     {
         [SerializeField] private string gameplaySceneName = "Imated Scene";
         [SerializeField] private string cutsceneSceneName = "Intro Cutscene";
+        [SerializeField] private string arcadeSceneName = "Arcade";
         [SerializeField] private float fadeSpeed = 1f;
 
         private void Update()
@@ -25,7 +26,7 @@ namespace LunarJam
         {
             GameManager.instance.SwitchGameStates(GameState.Arcade);
             BGMusic.instance.ChangeClip();
-            Play(gameplaySceneName);
+            Play(arcadeSceneName);
         }
         
         private void Play(string scene)
@@ -33,7 +34,6 @@ namespace LunarJam
             TransitionManager.instance.Fade(fadeSpeed, () =>
             {
                 SceneManager.LoadScene(scene);
-                print("a");
             });
         }
 

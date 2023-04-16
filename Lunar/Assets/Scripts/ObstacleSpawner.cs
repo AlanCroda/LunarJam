@@ -1,50 +1,40 @@
 using System.Collections.Generic;
-using System.Linq;
 using LunarJam;
 using UnityEngine;
 
 public class ObstacleSpawner : MonoBehaviour
 {
-    [SerializeField] private GameObject obstacle;
-    [SerializeField] private Vector2 minRange;
-    [SerializeField] private Vector2 maxRange;
-    [SerializeField] private float timeBetweenSpawns;
-    [SerializeField] private float amountToSpawn;
-    [SerializeField] private float distancePerObstacle = 1;
-    private float spawnTimer;
-    
+    public static ObstacleSpawner instance;
+    [SerializeField] private List<GameObject> levelPresets;
+    [SerializeField] private int maxAreas = 5;
+
+    private List<GameObject> spawnedAreas = new List<GameObject>();
+    private Vector2 screenBounds;
+
+    private void Awake()
+    {
+        screenBounds = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width,Screen.height,Camera.main.transform.position.z));
+    }
+
     private void Update()
     {
         if(DeathUI.instance.IsDead())
             return;
-        spawnTimer -= Time.deltaTime;
-        if (spawnTimer <= 0)
-        {
-            Spawn(amountToSpawn);
-            spawnTimer = timeBetweenSpawns;
-        }
+        instance = this;
     }
 
-    private void Spawn(float amount)
+    public void SpawnNextArea()
     {
-        var lastY = -999f;
-        for (int i = 0; i < amount; i++)
+        var pos = new Vector3(25f, 0f, 0);
+        if (spawnedAreas.Count > 0)
+            pos = new Vector3(spawnedAreas[spawnedAreas.Count - 1].transform.position.x + 10f, 0f, 0f);
+        var rand = Random.Range(0, levelPresets.Count);
+        var obj = Instantiate(levelPresets[rand], pos, Quaternion.identity);
+        spawnedAreas.Add(obj);
+        if (spawnedAreas.Count > maxAreas)
         {
-            var randY = 0f;
-            if (lastY != -999f)
-            {
-                var rand = Random.Range(0, 2);
-                if(rand == 0)
-                    randY = Random.Range(minRange.y, lastY + distancePerObstacle);
-                else
-                    randY = Random.Range(minRange.y, lastY - distancePerObstacle);
-            }
-            else
-                randY = Random.Range(minRange.y, maxRange.y);
-            var randX = Random.Range(minRange.x, maxRange.x);
-            lastY = randY;
-            var pos = new Vector3(randX, randY, 0);
-            var obj = Instantiate(obstacle, pos, Quaternion.identity);
+            Destroy(spawnedAreas[spawnedAreas.Count - 1]);
+            spawnedAreas.RemoveAt(spawnedAreas.Count - 1);
         }
     }
 }

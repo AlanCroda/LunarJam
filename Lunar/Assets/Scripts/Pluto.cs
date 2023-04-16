@@ -20,15 +20,15 @@ namespace LunarJam
         
         private void Start()
         {
-            CountdownScript.instance.OnTimerEnd += () =>
+            if (GameManager.instance.GetState() == GameState.Story)
             {
-                source.clip = arriveSound;
-                source.Play();
-                transform.DOMoveX(finalX, duration).OnComplete(() =>
+                CountdownScript.instance.OnTimerEnd += () =>
                 {
-                    Invoke(nameof(LoadNextScene), 1f);
-                });
-            };
+                    source.clip = arriveSound;
+                    source.Play();
+                    transform.DOMoveX(finalX, duration).OnComplete(() => { Invoke(nameof(LoadNextScene), 1f); });
+                };
+            }
         }
 
         private void LoadNextScene()
