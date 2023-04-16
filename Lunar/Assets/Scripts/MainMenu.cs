@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
@@ -40,6 +41,28 @@ namespace LunarJam
         public void Quit()
         {
             TransitionManager.instance.Fade(fadeSpeed, Application.Quit);
+        }
+
+        public void OpenURL(string person)
+        {
+            switch (person)
+            {
+                case "imated":
+                    Application.OpenURL("https://imated.itch.io/");
+                    break;
+                case "static":
+                    Application.OpenURL("https://staticvoidgd.itch.io/");
+                    break;
+                case "radu":
+                    Application.OpenURL("https://rradu.itch.io/");
+                    break;
+                case "thxrst":
+                    Application.OpenURL("https://thxrst.itch.io/");
+                    break;
+                case "lun":
+                    Application.OpenURL("https://lunartix.itch.io/");
+                    break;
+            }
         }
     }
 }
