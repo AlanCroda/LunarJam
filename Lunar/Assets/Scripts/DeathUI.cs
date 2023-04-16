@@ -15,11 +15,14 @@ namespace LunarJam
         [SerializeField] private float timeBeforeActivation = 1.5f;
         [SerializeField] private float fadeSpeed = 1f;
         [SerializeField] private TMP_Text survivedForText;
+        [SerializeField] private TMP_Text scoreText;
 
         private bool isDeathUIActive = false;
         public Action OnPlayerDied;
         private int lives = 1;
         private float timer;
+        private float hits = 0;
+        private float finalScore;
 
         private void Awake()
         {
@@ -29,11 +32,15 @@ namespace LunarJam
         public void ShowDeathUI()
         {
             lives--;
+            hits++;
             OnPlayerDied?.Invoke();
             if (GameManager.instance.GetState() == GameState.Arcade)
             {
+                finalScore = Mathf.Round(timer) * 100 - hits * 100;
                 if (survivedForText != null)
-                    survivedForText.text = $"SURVIVED FOR {timer:0.00}";
+                    survivedForText.text = $"TIME: {timer:0.00}";
+                if (scoreText != null)
+                    scoreText.text = $"SCORE: {finalScore:0}";
             }
             if (lives <= 0)
             {
