@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: End Cutscene 2
   m_EditorClassIdentifier: 
   cutsceneSprite: {fileID: 21300000, guid: 462a9e65163d6c9478f3fc2be8d4af2a, type: 3}
-  cutsceneText: "-It's incredible! Not only did Pluto survive, but it managed to
-    absorb\n    the mass of all its moons and grow almost double in size!- The E.S.A.
-    is astonished\n    by this. Their attack on Pluto backfired!"
+  cutsceneText: -It's incredible! Not only did Pluto survive, but it managed to absorb
+    the mass of all its moons and grow almost double in size!- The E.S.A. is astonished
+    by this. Their attack on Pluto backfired!
