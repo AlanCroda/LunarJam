@@ -16,6 +16,7 @@ namespace LunarJam
 
         private bool isDeathUIActive = false;
         public Action OnPlayerDied;
+        private int lives = 1;
 
         private void Awake()
         {
@@ -24,11 +25,20 @@ namespace LunarJam
 
         public void ShowDeathUI()
         {
-            Invoke(nameof(ActivateDeathUI), timeBeforeActivation);
-            isDeathUIActive = true;
+            lives--;
             OnPlayerDied?.Invoke();
+            if (lives <= 0)
+            {
+                Invoke(nameof(ActivateDeathUI), timeBeforeActivation);
+                isDeathUIActive = true;
+            }
         }
 
+        public void AddLives()
+        {
+            lives++;
+        }
+        
         private void ActivateDeathUI()
         {
             deathUI.SetActive(true);

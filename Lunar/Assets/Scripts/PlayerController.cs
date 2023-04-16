@@ -15,6 +15,7 @@ public class PlayerController : MonoBehaviour
     private Controls controls;
     internal Rigidbody2D rb;
     private bool canMove = true;
+    private int lives = 1;
 
     private void Start()
     {
@@ -23,13 +24,30 @@ public class PlayerController : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         DeathUI.instance.OnPlayerDied += () =>
         {
-            Instantiate(deathParticles, transform.position, Quaternion.identity);
-            Destroy(gameObject);
+            if (GameManager.instance.GetState() == GameState.Arcade)
+            {
+                GetComponent<PlanetData>().SwitchPreviousMoon();
+                lives--;
+                if (lives <= 0)
+                {
+                    Instantiate(deathParticles, transform.position, Quaternion.identity);
+                    Destroy(gameObject);
+                }
+            }
+            else
+            {
+                Instantiate(deathParticles, transform.position, Quaternion.identity);
+                Destroy(gameObject);
+            }
         };
         CountdownScript.instance.OnTimerEnd += () =>
         {
             if (GameManager.instance.GetState() == GameState.Arcade)
+            {
                 GetComponent<PlanetData>().SwitchNextMoon();
+                lives++;
+                DeathUI.instance.AddLives();
+            }
             else
             {
                 canMove = false;

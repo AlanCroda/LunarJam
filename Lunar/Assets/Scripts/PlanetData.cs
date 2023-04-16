@@ -134,5 +134,12 @@ namespace LunarJam
             nextMoon++;
             currentPlanet = (State) nextMoon;
         }
+        
+        public void SwitchPreviousMoon()
+        {
+            var nextMoon = (int) currentPlanet;
+            nextMoon--;
+            currentPlanet = (State) nextMoon;
+        }
     }
 }
