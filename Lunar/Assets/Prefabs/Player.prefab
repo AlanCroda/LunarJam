@@ -173,7 +173,7 @@ SpriteRenderer:
   m_SortingLayerID: -1070791173
   m_SortingLayer: 3
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: f12e3af5d54991441adb9136b1a980af, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d8e611eff7b98af419d043ae0b136383, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -225,7 +225,7 @@ Transform:
   m_GameObject: {fileID: 1142689977}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2.35, y: 2.35, z: 2.35}
+  m_LocalScale: {x: 2.25, y: 2.25, z: 2.25}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 1786957627331346388}
@@ -351,24 +351,36 @@ MonoBehaviour:
   styxSpeed: 12
   styxAcceleration: 1
   styxDeceleration: 2
+  styxInnerGlow: 1
+  styxOuterGlow: 0.85
   nixSpeed: 6
   nixAcceleration: 0.8
   nixDeceleration: 4
+  nixInnerGlow: 1.15
+  nixOuterGlow: 1
   kerberosSpeed: 5
   kerberosAcceleration: 0.7
   kerberosDeceleration: 12
+  kerberosInnerGlow: 1.5
+  kerberosOuterGlow: 1.25
   hydraSpeed: 4
   hydraAcceleration: 0.6
   hydraDeceleration: 14
+  hydraInnerGlow: 1.75
+  hydraOuterGlow: 1.45
   charonSpeed: 3
   charonAcceleration: 0.4
   charonDeceleration: 20
+  charonInnerGlow: 2.75
+  charonOuterGlow: 2.25
   startingState: 1
   styxSprite: {fileID: 21300000, guid: 2246ad644b2984c4a83fe9d8736f1807, type: 3}
   nixSprite: {fileID: 21300000, guid: f12e3af5d54991441adb9136b1a980af, type: 3}
   kerberosSprite: {fileID: 21300000, guid: c3d6442da0bdd7342afbc1c5df56beab, type: 3}
   hydraSprite: {fileID: 21300000, guid: 562f773a100b84e4a8c9a5d7900c7034, type: 3}
   charonSprite: {fileID: 21300000, guid: d8e611eff7b98af419d043ae0b136383, type: 3}
+  glowOuterRenderer: {fileID: 339701501}
+  glowInnerRenderer: {fileID: 1142689980}
 --- !u!114 &1786957627331346390
 MonoBehaviour:
   m_ObjectHideFlags: 0

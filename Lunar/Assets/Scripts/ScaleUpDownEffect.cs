@@ -10,6 +10,12 @@ namespace LunarJam
         
         private void Start()
         {
+            Invoke(nameof(StartScale), 0.01f);
+        }
+
+        private void StartScale()
+        {
+            newScale = transform.localScale.x + 0.25f;
             transform.DOScale(newScale, duration).SetLoops(-1, LoopType.Yoyo);
         }
     }
