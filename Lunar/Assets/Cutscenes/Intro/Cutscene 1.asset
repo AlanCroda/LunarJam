@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: Cutscene 1
   m_EditorClassIdentifier: 
   cutsceneSprite: {fileID: 21300000, guid: 356b68d1cc94d5c4593db768a8673ce6, type: 3}
-  cutsceneText: Pluto was peacfully floating around its orbit as a now dwarf planet
-    with its 5 moons, Styx, Nix, Kerberos, Hydra, and Charon.
+  cutsceneText: The year is 2025. Pluto, by now completely resigned to its classification
+    as a "Dwarf Planet", peacefully floats in outer space with its 5 moons, Styx,
+    Nix, Kerberos, Hydra and Charon, following along.

@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: End Cutscene 3
   m_EditorClassIdentifier: 
   cutsceneSprite: {fileID: 21300000, guid: 8dab8268859c4594993405da61ee9ee6, type: 3}
-  cutsceneText: They realized that pluto may now qualify to become a real planet.
-    Later that night, pluto was officially annouced as the 9th planet in our solar
-    system and everyone was happy in the end. (even pluto)
+  cutsceneText: After this series of spectacular events, the Association has decided
+    to renounce their Evil ways, and that same day, Pluto was officially reinstated
+    as the Solar System's 9th Planet.

@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: End Cutscene 1
   m_EditorClassIdentifier: 
   cutsceneSprite: {fileID: 21300000, guid: ed79115396d672a4f8e0289cc6f22c2d, type: 3}
-  cutsceneText: Pluto's moons have just crashed straight into pluto. When pluto and
-    its moons merged, pluto had grown by a massive amount.
+  cutsceneText: After reaching Pluto at such dangerously high speeds, the 5 Moons
+    went way beyond their original orbit, and crashed straight into the Planet!
