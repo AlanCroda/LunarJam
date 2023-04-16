@@ -26,10 +26,10 @@ public class Obstacle : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
+            Destroy(gameObject);
             CameraShake.instance.Shake();
             DeathUI.instance.ShowDeathUI();
             OnPlayerCollision(collision.gameObject);
-            Destroy(gameObject);
         }
         if (collision.gameObject.CompareTag("ArrowTrigger") && this is HomingMissile)
         {
