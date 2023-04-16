@@ -360,7 +360,7 @@ MonoBehaviour:
   hydraSpeed: 4
   hydraAcceleration: 0.6
   hydraDeceleration: 14
-  charonSpeed: 2
+  charonSpeed: 3
   charonAcceleration: 0.4
   charonDeceleration: 20
   startingState: 1
