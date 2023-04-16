@@ -336,26 +336,31 @@ MonoBehaviour:
   styxSpeed: 12
   styxAcceleration: 1
   styxDeceleration: 2
+  styxColliderRadius: 0
   styxInnerGlow: 3.25
   styxOuterGlow: 2.5
   nixSpeed: 6
   nixAcceleration: 0.8
   nixDeceleration: 4
+  nixColliderRadius: 0.45
   nixInnerGlow: 4
   nixOuterGlow: 3
   kerberosSpeed: 5
   kerberosAcceleration: 0.7
   kerberosDeceleration: 12
+  kerberosColliderRadius: 0.46
   kerberosInnerGlow: 6
   kerberosOuterGlow: 4
   hydraSpeed: 4
   hydraAcceleration: 0.6
   hydraDeceleration: 14
+  hydraColliderRadius: 0.52
   hydraInnerGlow: 8
   hydraOuterGlow: 5.25
   charonSpeed: 3
   charonAcceleration: 0.4
   charonDeceleration: 20
+  charonColliderRadius: 0.9
   charonInnerGlow: 10
   charonOuterGlow: 6.5
   startingState: 1

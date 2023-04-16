@@ -601,12 +601,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 852412b651f385c45aa0d3d4c1e578f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  obstacle: {fileID: 3024322759509458899, guid: 2ae1886a1afa1e24f84d9812690f151b, type: 3}
-  minRange: {x: 10, y: 3}
-  maxRange: {x: 14, y: -4}
-  timeBetweenSpawns: 0.5
-  amountToSpawn: 2
-  distancePerObstacle: 3.5
+  levelPresets:
+    list: []
+  maxAreas: 5
 --- !u!1001 &513574457
 PrefabInstance:
   m_ObjectHideFlags: 0
