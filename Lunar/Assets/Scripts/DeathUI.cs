@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
@@ -13,10 +14,12 @@ namespace LunarJam
         [SerializeField] private GameObject deathUI;
         [SerializeField] private float timeBeforeActivation = 1.5f;
         [SerializeField] private float fadeSpeed = 1f;
+        [SerializeField] private TMP_Text survivedForText;
 
         private bool isDeathUIActive = false;
         public Action OnPlayerDied;
         private int lives = 1;
+        private float timer;
 
         private void Awake()
         {
@@ -27,6 +30,11 @@ namespace LunarJam
         {
             lives--;
             OnPlayerDied?.Invoke();
+            if (GameManager.instance.GetState() == GameState.Arcade)
+            {
+                if (survivedForText != null)
+                    survivedForText.text = $"SURVIVED FOR {timer:0.00}";
+            }
             if (lives <= 0)
             {
                 Invoke(nameof(ActivateDeathUI), timeBeforeActivation);
@@ -48,11 +56,13 @@ namespace LunarJam
         {
             if (deathUI.activeSelf)
             {
-                if(Keyboard.current.rKey.wasPressedThisFrame)
+                if (Keyboard.current.rKey.wasPressedThisFrame)
                     Restart();
-                else if(Keyboard.current.qKey.wasPressedThisFrame)
+                else if (Keyboard.current.qKey.wasPressedThisFrame)
                     QuitToMenu();
             }
+            else
+                timer += Time.deltaTime;
         }
 
         public void Restart()
