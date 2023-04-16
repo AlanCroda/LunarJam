@@ -3138,5 +3138,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0fcbc988f1eba9d4a98896a64d81789e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  newY: 200
+  newY: 300
   duration: 2.25
