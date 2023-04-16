@@ -14,6 +14,7 @@ public class ObstacleSpawner : MonoBehaviour
     private void Awake()
     {
         screenBounds = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width,Screen.height,Camera.main.transform.position.z));
+        SpawnNextArea();
     }
 
     private void Update()
