@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cutsceneSprite: {fileID: 21300000, guid: a064fb7b1edd38b4aa3ca9c60809b13c, type: 3}
   cutsceneText: Their existence is in danger! Their safety, jeopardized! Each moon
-    now has about 10 seconds to reach Pluto again and get back into orbit, or be
-    lost in space forever...
+    now has 10 seconds to reach Pluto again and get back into orbit, or be lost in
+    space forever...

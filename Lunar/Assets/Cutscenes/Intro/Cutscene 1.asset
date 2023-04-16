@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Cutscene 1
   m_EditorClassIdentifier: 
   cutsceneSprite: {fileID: 21300000, guid: 356b68d1cc94d5c4593db768a8673ce6, type: 3}
-  cutsceneText: The year is 2025. Pluto, now completely resigned a "Dwarf Planet",
+  cutsceneText: The year is 2025. Pluto, now completely resigned as a "Dwarf Planet",
     peacefully floats in outer space with its 5 moons, Styx, Nix, Kerberos, Hydra
     and Charon, following along their orbit.
