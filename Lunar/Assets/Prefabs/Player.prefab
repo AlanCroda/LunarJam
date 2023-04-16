@@ -336,7 +336,7 @@ MonoBehaviour:
   styxSpeed: 11
   styxAcceleration: 1
   styxDeceleration: 3
-  styxColliderRadius: 0
+  styxColliderRadius: 0.25
   styxInnerGlow: 3.25
   styxOuterGlow: 2.5
   nixSpeed: 6
@@ -514,4 +514,4 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.45
+  m_Radius: 0.25
