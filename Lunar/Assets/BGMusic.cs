@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using DG.Tweening;
 using UnityEngine;
 
 namespace LunarJam
@@ -25,14 +26,22 @@ namespace LunarJam
 
         public void ChangeClip()
         {
-            musicSource.clip = musicClip;
-            musicSource.Play();
+            musicSource.DOFade(0f, 0.5f).OnComplete(() =>
+            {
+                musicSource.clip = musicClip;
+                musicSource.Play();
+                musicSource.DOFade(1f, 0.5f);
+            });
         }
     
         public void ResetClip()
         {
-            musicSource.clip = defaultClip;
-            musicSource.Play();
+            musicSource.DOFade(0f, 0.5f).OnComplete(() =>
+            {
+                musicSource.clip = defaultClip;
+                musicSource.Play();
+                musicSource.DOFade(1f, 0.5f);
+            });
         }
     }
 
