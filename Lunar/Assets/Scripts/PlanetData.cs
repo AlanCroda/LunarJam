@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -68,6 +69,7 @@ namespace LunarJam
         [SerializeField] private SpriteRenderer glowOuterRenderer;
         [SerializeField] private SpriteRenderer glowInnerRenderer;
 
+        private GameObject moonUI;
 
         private enum State
         {
@@ -86,6 +88,7 @@ namespace LunarJam
             spriteRenderer = GetComponentInChildren<SpriteRenderer>();
             circleCollider = GetComponent<CircleCollider2D>();
             currentPlanet = startingState;
+            moonUI = GameObject.FindWithTag("MoonUI");
         }
 
         private void Update()
@@ -142,16 +145,32 @@ namespace LunarJam
 
         public void SwitchNextMoon()
         {
-            var nextMoon = (int) currentPlanet;
-            nextMoon++;
+            var nextMoon = ((int) currentPlanet) + 1;
             currentPlanet = (State) nextMoon;
+
+            handleMoonUI(nextMoon, false);
         }
         
         public void SwitchPreviousMoon()
         {
-            var nextMoon = (int) currentPlanet;
-            nextMoon--;
+            var nextMoon = ((int) currentPlanet) - 1;
             currentPlanet = (State) nextMoon;
+
+            handleMoonUI(nextMoon, true);
+        }
+
+        private void handleMoonUI(int newMoon, bool collided)
+        {
+            if(newMoon >= 0)
+            {
+                if (collided)
+                {
+                    moonUI.transform.GetChild(newMoon+1).GetComponent<CanvasGroup>().alpha = 0.4f;
+                } else
+                {
+                    moonUI.transform.GetChild(newMoon).GetComponent<CanvasGroup>().alpha = 1;
+                }
+            }
         }
     }
 }

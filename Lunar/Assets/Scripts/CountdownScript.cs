@@ -22,11 +22,8 @@ public class CountdownScript : MonoBehaviour
         instance = this;
         Invoke(nameof(StartTimer), startingDelay);
 
-        if (GameManager.instance.GetState() == GameState.Story)
-        {
-            GameObject title = GameObject.FindWithTag("Title");
-            title.GetComponent<CanvasGroup>().DOFade(0, startingDelay);
-        }
+        GameObject title = GameObject.FindWithTag("Title");
+        title.GetComponent<CanvasGroup>().DOFade(0, startingDelay + 0.5f);
     }
 
     private void StartTimer()

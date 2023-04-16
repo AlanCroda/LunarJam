@@ -7,6 +7,7 @@ TagManager:
   - ArrowTrigger
   - Obstacle
   - Title
+  - MoonUI
   layers:
   - Default
   - TransparentFX
