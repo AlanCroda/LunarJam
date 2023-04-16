@@ -6,14 +6,21 @@ namespace LunarJam
 {
     public class BGMusic : MonoBehaviour
     {
+        public static BGMusic instance;
         private AudioSource musicSource;
         [SerializeField] private AudioClip musicClip;
-        public static BGMusic instance;
-        void Start()
+        private AudioClip defaultClip;
+    
+        void Awake()
         {
-            musicSource = GetComponent<AudioSource>();
-            DontDestroyOnLoad(gameObject);
+            if (instance != null && instance != this) {
+                Destroy(gameObject);
+                return;
+            }
             instance = this;
+            DontDestroyOnLoad(gameObject);
+            musicSource = GetComponent<AudioSource>();
+            defaultClip = musicSource.clip;
         }
 
         public void ChangeClip()
@@ -21,5 +28,12 @@ namespace LunarJam
             musicSource.clip = musicClip;
             musicSource.Play();
         }
+    
+        public void ResetClip()
+        {
+            musicSource.clip = defaultClip;
+            musicSource.Play();
+        }
     }
+
 }

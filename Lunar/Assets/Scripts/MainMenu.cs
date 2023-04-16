@@ -7,6 +7,7 @@ namespace LunarJam
     public class MainMenu : MonoBehaviour
     {
         [SerializeField] private string gameplaySceneName = "Imated Scene";
+        [SerializeField] private string cutsceneSceneName = "Intro Cutscene";
         [SerializeField] private float fadeSpeed = 1f;
 
         private void Update()
@@ -17,21 +18,22 @@ namespace LunarJam
         public void PlayStory()
         {
             GameManager.instance.SwitchGameStates(GameState.Story);
-            Play();
+            Play(cutsceneSceneName);
         }
         
         public void PlayArcade()
         {
             GameManager.instance.SwitchGameStates(GameState.Arcade);
-            Play();
+            BGMusic.instance.ChangeClip();
+            Play(gameplaySceneName);
         }
         
-        private void Play()
+        private void Play(string scene)
         {
             TransitionManager.instance.Fade(fadeSpeed, () =>
             {
-                SceneManager.LoadScene(gameplaySceneName);
-                BGMusic.instance.ChangeClip();
+                SceneManager.LoadScene(scene);
+                print("a");
             });
         }
 

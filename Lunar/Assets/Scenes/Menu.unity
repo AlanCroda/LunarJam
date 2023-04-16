@@ -3051,6 +3051,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameplaySceneName: ImatedScene
+  cutsceneSceneName: Intro Cutscene
   fadeSpeed: 0.5
 --- !u!1 &2051066890
 GameObject:

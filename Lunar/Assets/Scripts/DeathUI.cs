@@ -56,7 +56,8 @@ namespace LunarJam
             Time.timeScale = 1;
             TransitionManager.instance.Fade(fadeSpeed, () =>
             {
-                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
+                BGMusic.instance.ResetClip();
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 2);
             });
         }
 

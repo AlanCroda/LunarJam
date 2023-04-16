@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9656d60f110b261419c9ee92cebe7bb9, type: 3}
+  m_Name: Cutscene 1
+  m_EditorClassIdentifier: 
+  cutsceneSprite: {fileID: 21300000, guid: 356b68d1cc94d5c4593db768a8673ce6, type: 3}
+  cutsceneText: Pluto was peacfully floating around its orbit as a now dwarf planet
+    with its 5 moons, Styx, Nix, Kerberos, Hydra, and Charon.
