@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: End Cutscene 2
   m_EditorClassIdentifier: 
   cutsceneSprite: {fileID: 21300000, guid: 462a9e65163d6c9478f3fc2be8d4af2a, type: 3}
-  cutsceneText: Scientists from all around the globe are in shock of what had just
-    happened. Pluto merging with its moons was going down in history. They even saw
-    that this "New Pluto" had pulled in asteroids and created new  moons.
+  cutsceneText: It's incredible! Not only did Pluto survive, but it managed to absorb
+    the mass of all its moons to grow almost double in size! The Evil Scientists
+    Association is astonished beyond comprehension.

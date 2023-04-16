@@ -13,6 +13,8 @@ MonoBehaviour:
   m_Name: Cutscene 3
   m_EditorClassIdentifier: 
   cutsceneSprite: {fileID: 21300000, guid: d54239a6d02ad4341a289d465f6188ca, type: 3}
-  cutsceneText: Turns out that pluto survived the attack however pluto's moons were
-    blasted out of pluto's orbit, scattering them throughout space, waiting to be
-    found.
+  cutsceneText: 'But Pluto would not go down without a fight!
+
+    Miraculously,
+    the Planet managed to survive, but the aftermath was still catastrophic: Pluto''s
+    5 moons were blown out of orbit, and scattered into space.'

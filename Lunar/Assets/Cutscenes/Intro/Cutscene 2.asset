@@ -13,6 +13,8 @@ MonoBehaviour:
   m_Name: Cutscene 2
   m_EditorClassIdentifier: 
   cutsceneSprite: {fileID: 21300000, guid: 01faca879da4a794194a5d1272b2a066, type: 3}
-  cutsceneText: One day, a group of scientists decided it'd be funny to blow up pluto
-    and only once they have fired their rockets at pluto and its moons, they realized
-    their mistake.
+  cutsceneText: 'Until now!
+
+    5 Billion Kilometers away, Earth''s Evil Scientists
+    Association has culminated its Magnum Opus: A Grand Attack on Pluto to get rid
+    of it once and for all!'
