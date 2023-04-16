@@ -2,6 +2,7 @@ using System;
 using LunarJam;
 using UnityEngine;
 using TMPro;
+using DG.Tweening;
 
 public class CountdownScript : MonoBehaviour
 {
@@ -20,6 +21,9 @@ public class CountdownScript : MonoBehaviour
         currentTime = startingTime;
         instance = this;
         Invoke(nameof(StartTimer), startingDelay);
+
+        GameObject title = GameObject.FindWithTag("Title");
+        title.GetComponent<CanvasGroup>().DOFade(0, startingDelay);
     }
 
     private void StartTimer()

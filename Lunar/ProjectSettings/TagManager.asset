@@ -6,6 +6,7 @@ TagManager:
   tags:
   - ArrowTrigger
   - Obstacle
+  - Title
   layers:
   - Default
   - TransparentFX
