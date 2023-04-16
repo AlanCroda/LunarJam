@@ -26,21 +26,23 @@ namespace LunarJam
 
         public void ChangeClip()
         {
+            var volume = musicSource.volume;
             musicSource.DOFade(0f, 0.5f).OnComplete(() =>
             {
                 musicSource.clip = musicClip;
                 musicSource.Play();
-                musicSource.DOFade(1f, 0.5f);
+                musicSource.DOFade(volume, 0.5f);
             });
         }
     
         public void ResetClip()
         {
+            var volume = musicSource.volume;
             musicSource.DOFade(0f, 0.5f).OnComplete(() =>
             {
                 musicSource.clip = defaultClip;
                 musicSource.Play();
-                musicSource.DOFade(1f, 0.5f);
+                musicSource.DOFade(volume, 0.5f);
             });
         }
     }
