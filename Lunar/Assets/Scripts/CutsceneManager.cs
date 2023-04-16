@@ -10,6 +10,7 @@ namespace LunarJam
 {
     public class CutsceneManager : MonoBehaviour
     {
+        [SerializeField] private bool isEnd;
         [SerializeField] private List<CutsceneData> cutscenes;
         [SerializeField] private Image cutsceneImage;
         [SerializeField] private TMP_Text cutsceneText;
@@ -32,8 +33,16 @@ namespace LunarJam
             {
                 TransitionManager.instance.Fade(0.5f, () =>
                 {
-                    SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-                    BGMusic.instance.ChangeClip();
+                    if (!isEnd)
+                    {
+                        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+                        BGMusic.instance.ChangeClip();
+                    }
+                    else
+                    {
+                        SceneManager.LoadScene(0);
+                        BGMusic.instance.ResetClip();
+                    }
                 });
                 return;
             }

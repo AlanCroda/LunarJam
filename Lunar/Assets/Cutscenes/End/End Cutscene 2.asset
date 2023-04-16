@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9656d60f110b261419c9ee92cebe7bb9, type: 3}
+  m_Name: End Cutscene 2
+  m_EditorClassIdentifier: 
+  cutsceneSprite: {fileID: 21300000, guid: 462a9e65163d6c9478f3fc2be8d4af2a, type: 3}
+  cutsceneText: Scientists from all around the globe are in shock of what had just
+    happened. Pluto merging with its moons was going down in history. They even saw
+    that this "New Pluto" had pulled in asteroids and created new  moons.
