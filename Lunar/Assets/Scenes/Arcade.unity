@@ -350,11 +350,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   levelPresets:
-  - {fileID: 947850856051729913, guid: 7b270b4e671c1af4ba932ea3c29cc726, type: 3}
-  - {fileID: 1260517545850468719, guid: 6021e6c96685d4744922edf4e2e0825e, type: 3}
-  - {fileID: 3243005060746181617, guid: 7a20d42655022bf4aab823c792a716f7, type: 3}
-  - {fileID: 9135110487358854554, guid: f35d36ecc6c52ee46bb04f0892622b3f, type: 3}
-  - {fileID: 8242022528779735843, guid: 7ae8b90e823e6f44396ff59f3ad69e92, type: 3}
+    list:
+    - weight: 15
+      prefab: {fileID: 947850856051729913, guid: 7b270b4e671c1af4ba932ea3c29cc726, type: 3}
+    - weight: 20
+      prefab: {fileID: 1260517545850468719, guid: 6021e6c96685d4744922edf4e2e0825e, type: 3}
+    - weight: 25
+      prefab: {fileID: 3243005060746181617, guid: 7a20d42655022bf4aab823c792a716f7, type: 3}
+    - weight: 30
+      prefab: {fileID: 9135110487358854554, guid: f35d36ecc6c52ee46bb04f0892622b3f, type: 3}
+    - weight: 10
+      prefab: {fileID: 8242022528779735843, guid: 7ae8b90e823e6f44396ff59f3ad69e92, type: 3}
+    - weight: 10
+      prefab: {fileID: 4493087017531243465, guid: 00cc3c66ab7511941b0b52f8a500fa66, type: 3}
+    - weight: 20
+      prefab: {fileID: 9210209275365870912, guid: 31b46ae4d8d34fa4f846f6854fba3e3e, type: 3}
+    - weight: 10
+      prefab: {fileID: 6532227112599700942, guid: 3d9e732047ffc084797baade9ed5cfbe, type: 3}
+    - weight: 5
+      prefab: {fileID: 6553270975702057969, guid: d28f328882450d64f877e6edcf0011be, type: 3}
+    - weight: 15
+      prefab: {fileID: 3716704607276265104, guid: 3859441704d6a664c8f16ecccdc83d9b, type: 3}
   maxAreas: 10
 --- !u!1 &500085168
 GameObject:
