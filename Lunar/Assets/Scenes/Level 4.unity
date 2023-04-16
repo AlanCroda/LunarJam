@@ -3497,6 +3497,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1786957628794632661, guid: a15ff322a21be6e4db08d99bae932f55, type: 3}
+      propertyPath: m_Radius
+      value: 0.8947647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1786957628794632661, guid: a15ff322a21be6e4db08d99bae932f55, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.002512753
+      objectReference: {fileID: 0}
     - target: {fileID: 4659597845208675297, guid: a15ff322a21be6e4db08d99bae932f55, type: 3}
       propertyPath: startingState
       value: 4
