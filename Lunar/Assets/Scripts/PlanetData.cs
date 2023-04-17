@@ -11,6 +11,9 @@ namespace LunarJam
         private SpriteRenderer spriteRenderer;
         private CircleCollider2D circleCollider;
 
+        private AudioSource source;
+        [SerializeField] private AudioClip upgradeSound;
+
         [Header("Styx")]
         [SerializeField] private float styxSpeed;
         [SerializeField] private float styxAcceleration;
@@ -89,6 +92,8 @@ namespace LunarJam
             circleCollider = GetComponent<CircleCollider2D>();
             currentPlanet = startingState;
             moonUI = GameObject.FindWithTag("MoonUI");
+            source = gameObject.AddComponent<AudioSource>();
+            source.playOnAwake = false;
         }
 
         private void Update()
@@ -168,6 +173,8 @@ namespace LunarJam
                     moonUI.transform.GetChild(newMoon+1).GetComponent<CanvasGroup>().alpha = 0.4f;
                 } else
                 {
+                    source.clip = upgradeSound;
+                    source.Play();
                     moonUI.transform.GetChild(newMoon).GetComponent<CanvasGroup>().alpha = 1;
                 }
             }
