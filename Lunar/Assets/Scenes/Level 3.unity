@@ -299,15 +299,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4316952149378836743, guid: c96c7faeb257b6f4cb5014370f46c14c, type: 3}
       propertyPath: amplitude
-      value: 3
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4316952149378836743, guid: c96c7faeb257b6f4cb5014370f46c14c, type: 3}
       propertyPath: frequency
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4316952149378836743, guid: c96c7faeb257b6f4cb5014370f46c14c, type: 3}
       propertyPath: sineSpeed
-      value: 4
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6553059720348445669, guid: c96c7faeb257b6f4cb5014370f46c14c, type: 3}
       propertyPath: m_RootOrder
@@ -1103,6 +1103,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4316952149378836743, guid: c96c7faeb257b6f4cb5014370f46c14c, type: 3}
+      propertyPath: amplitude
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4316952149378836743, guid: c96c7faeb257b6f4cb5014370f46c14c, type: 3}
+      propertyPath: frequency
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4316952149378836743, guid: c96c7faeb257b6f4cb5014370f46c14c, type: 3}
+      propertyPath: sineSpeed
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6553059720348445669, guid: c96c7faeb257b6f4cb5014370f46c14c, type: 3}
       propertyPath: m_RootOrder
       value: 10
@@ -1831,7 +1843,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4316952149378836743, guid: c96c7faeb257b6f4cb5014370f46c14c, type: 3}
       propertyPath: amplitude
-      value: 1
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4316952149378836743, guid: c96c7faeb257b6f4cb5014370f46c14c, type: 3}
+      propertyPath: frequency
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4316952149378836743, guid: c96c7faeb257b6f4cb5014370f46c14c, type: 3}
+      propertyPath: sineSpeed
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6553059720348445669, guid: c96c7faeb257b6f4cb5014370f46c14c, type: 3}
       propertyPath: m_RootOrder
@@ -2367,15 +2387,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4316952149378836743, guid: c96c7faeb257b6f4cb5014370f46c14c, type: 3}
       propertyPath: amplitude
-      value: 0.7
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4316952149378836743, guid: c96c7faeb257b6f4cb5014370f46c14c, type: 3}
       propertyPath: frequency
-      value: 7
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4316952149378836743, guid: c96c7faeb257b6f4cb5014370f46c14c, type: 3}
       propertyPath: sineSpeed
-      value: 9
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6553059720348445669, guid: c96c7faeb257b6f4cb5014370f46c14c, type: 3}
       propertyPath: m_RootOrder
@@ -3013,15 +3033,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4316952149378836743, guid: c96c7faeb257b6f4cb5014370f46c14c, type: 3}
       propertyPath: amplitude
-      value: 1.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4316952149378836743, guid: c96c7faeb257b6f4cb5014370f46c14c, type: 3}
       propertyPath: frequency
-      value: 4
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4316952149378836743, guid: c96c7faeb257b6f4cb5014370f46c14c, type: 3}
       propertyPath: sineSpeed
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6553059720348445669, guid: c96c7faeb257b6f4cb5014370f46c14c, type: 3}
       propertyPath: m_RootOrder
@@ -4363,6 +4383,18 @@ PrefabInstance:
     - target: {fileID: 4316952149378836743, guid: c96c7faeb257b6f4cb5014370f46c14c, type: 3}
       propertyPath: speed
       value: 7.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4316952149378836743, guid: c96c7faeb257b6f4cb5014370f46c14c, type: 3}
+      propertyPath: amplitude
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4316952149378836743, guid: c96c7faeb257b6f4cb5014370f46c14c, type: 3}
+      propertyPath: frequency
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4316952149378836743, guid: c96c7faeb257b6f4cb5014370f46c14c, type: 3}
+      propertyPath: sineSpeed
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6553059720348445669, guid: c96c7faeb257b6f4cb5014370f46c14c, type: 3}
       propertyPath: m_RootOrder
