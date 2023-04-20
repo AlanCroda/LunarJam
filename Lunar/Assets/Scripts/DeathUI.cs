@@ -51,7 +51,8 @@ namespace LunarJam
 
         public void AddLives()
         {
-            lives++;
+            if(lives <= 4)
+                lives++;
         }
         
         private void ActivateDeathUI()

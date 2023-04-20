@@ -1,16 +1,31 @@
+using System.Collections;
 using UnityEngine;
 
 namespace LunarJam
 {
     public class SpawnTrigger : MonoBehaviour
     {
-        private void OnTriggerEnter2D(Collider2D col)
+        [SerializeField] private float spawnDelay;
+        private float spawnTime;
+
+        private void Awake()
         {
-            if (col.CompareTag("Obstacle"))
+            spawnTime = 0;
+        }
+
+        private void Update()
+        {
+            spawnTime -= Time.deltaTime;
+            if(spawnTime < 0)
             {
-                ObstacleSpawner.instance.SpawnNextArea();
-                Destroy(col.gameObject, 7.5f);
+                spawnTime = spawnDelay;
+                SpawnPreset();
             }
+        }
+
+        private void SpawnPreset()
+        {
+            ObstacleSpawner.instance.SpawnNextArea();
         }
     }
 }

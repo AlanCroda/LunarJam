@@ -44,9 +44,12 @@ public class PlayerController : MonoBehaviour
         {
             if (GameManager.instance.GetState() == GameState.Arcade)
             {
-                GetComponent<PlanetData>().SwitchNextMoon();
-                lives++;
-                DeathUI.instance.AddLives();
+                if (lives <= 4)
+                {
+                    GetComponent<PlanetData>().SwitchNextMoon();
+                    lives++;
+                    DeathUI.instance.AddLives();
+                }
             }
             else
             {

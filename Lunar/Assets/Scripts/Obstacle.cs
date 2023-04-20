@@ -17,6 +17,14 @@ public class Obstacle : MonoBehaviour
         transform.DOScale(transform.localScale * size, 0);
     }
 
+    private void Update()
+    {
+        if(transform.position.x < -15)
+        {
+            Destroy(gameObject);
+        }
+    }
+
     protected void OnBecameInvisible()
     {
         Destroy(gameObject);

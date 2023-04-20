@@ -150,7 +150,11 @@ namespace LunarJam
 
         public void SwitchNextMoon()
         {
-            var nextMoon = ((int) currentPlanet) + 1;
+            var nextMoon = (int) currentPlanet;
+            if (nextMoon <= 4)
+            {
+                nextMoon += 1;
+            }
             currentPlanet = (State) nextMoon;
 
             handleMoonUI(nextMoon, false);

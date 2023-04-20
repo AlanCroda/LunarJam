@@ -333,9 +333,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d73ee18a32c16504289f5c1009a5395f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  styxSpeed: 11
+  styxSpeed: 10
   styxAcceleration: 1
-  styxDeceleration: 3
+  styxDeceleration: 3.5
   styxColliderRadius: 0.25
   styxInnerGlow: 3.25
   styxOuterGlow: 2.5
